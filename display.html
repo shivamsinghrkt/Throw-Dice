@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <div class="class1">
+           <p>Member1</p>
+        </div>
+        <div class="class2">
+         <p>Member2</p>
+        </div>
+        <div class="class3">
+         <p>Member3</p>
+        </div>
+    
+</body>
+</html>
+<script>
+     var arr=JSON.parse(localStorage.getItem("member"))
+     displayarr(arr);
+     function displayarr(arr){
+     var dis1= document.querySelector(".class1");
+         
+     if(arr[0]>arr[1] && arr[0]>arr[2]){
+         dis1.innerHTML=arr[0]
+         dis1.style.color="green"
+     }
+     
+     else if(arr[0]>arr[1] || arr[0]>arr[2]){
+         dis1.innerHTML=arr[0]
+         dis1.style.color="yellow"
+     }
+   else{
+    dis1.innerHTML=arr[0]
+         dis1.style.color="red";
+   }
+         var dis2=document.querySelector(".class2");
+         if(arr[1]>arr[0] && arr[1]>arr[2]){
+         dis2.innerHTML=arr[1]
+         dis2.style.color="green"
+     }
+    else if(arr[1]>arr[0] || arr[1]>arr[2]){
+        dis2.innerHTML=arr[1]
+         dis2.style.color="yellow"
+    }
+   else{
+    dis2.innerHTML=arr[1]
+         dis2.style.color="red";
+   }
+  
+   var dis3=document.querySelector(".class3");
+   if(arr[2]>arr[1] && arr[2]>arr[0]){
+         dis3.innerHTML=arr[2]
+         dis3.style.color="green"
+     }
+     else if(arr[2]>arr[1] || arr[2]>arr[0]){
+         dis3.innerHTML=arr[2]
+         dis3.style.color="yellow"
+     }
+   else{
+    dis3.innerHTML=arr[2]
+         dis3.style.color="red";
+   }
+}
+</script>
